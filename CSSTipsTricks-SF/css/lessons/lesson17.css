@@ -1,0 +1,27 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 17
+ * ----------------------------------------------------------------------------------------
+ */
+
+table {
+	border: 2px solid #EAEAEA;
+}
+
+	td,
+	th {
+		border: 1px solid #EAEAEA;
+		padding: 1em;
+	}
+
+	th {
+		text-align: left;
+	}
+
+	tr:nth-child(even) {
+		background-color: #FAFAFA;
+	}
+
+li:nth-child(2n) {
+	color: blue;
+}

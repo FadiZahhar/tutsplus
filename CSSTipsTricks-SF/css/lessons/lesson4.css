@@ -1,0 +1,19 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 4
+ * ----------------------------------------------------------------------------------------
+ */
+
+.first-letter {
+	float: left;
+	color: green;
+	font: 72px/100% Georgia, serif;
+	margin: 0 14px 0 0;
+}
+
+.demo-container p:first-child:first-letter {
+	float: left;
+	color: green;
+	font: 72px/100% Georgia, serif;
+	margin: 0 14px 0 0;
+}

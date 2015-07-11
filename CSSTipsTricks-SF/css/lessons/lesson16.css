@@ -1,0 +1,22 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 16
+ * ----------------------------------------------------------------------------------------
+ */
+.back-to-top {
+	background-color: black;
+	background-color: rgba(0, 0, 0, .75);
+	bottom: 2em;
+	color: white;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 11px;
+	padding: .5em 1em;
+	position: fixed;
+	right: 2em;	
+	text-transform: uppercase;
+}
+
+	.back-to-top:hover {
+		color: #69BBD2;
+	}

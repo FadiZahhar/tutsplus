@@ -1,0 +1,47 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 7
+ * ----------------------------------------------------------------------------------------
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"] + label:before {
+	background-color: white;
+	border: 1px solid #ccc;
+	content: "";
+	display: inline-block;
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+	margin: -2px 6px 0 0;
+	vertical-align: middle;
+	text-align: center;
+	width: 16px;	
+}
+
+input[type="checkbox"]:checked + label:before {
+	content: "\2713";
+}
+
+input[type="radio"] + label:before {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 12px;
+	content: "";
+	display: inline-block;
+	font-size: 26px;
+	line-height: 13px;
+	height: 12px;
+	margin: -2px 6px 0 0;
+	vertical-align: middle;
+	text-align: center;
+	width: 12px;	
+}
+
+input[type="radio"]:checked + label:before {
+	content: "\2022";
+}

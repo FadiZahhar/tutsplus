@@ -1,0 +1,30 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 10
+ * ----------------------------------------------------------------------------------------
+ */
+
+.image-container-1,
+.image-container-2 {
+	background-color: #ccc;
+	margin-bottom: 2em;
+}
+
+.image-container-1 {
+	width: 100%;
+	min-height: 30em;
+	background: #ccc url(http://lorempixel.com/200/200) center center no-repeat;
+}
+
+.image-container-2 {
+	position: relative;
+	min-height: 30em;
+}
+
+	.image-container-2 img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -100px;
+	}

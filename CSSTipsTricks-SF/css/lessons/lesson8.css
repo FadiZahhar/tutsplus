@@ -1,0 +1,30 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 8
+ * ----------------------------------------------------------------------------------------
+ */
+
+input[type="text"],
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	outline: none;
+	padding: .5em;
+	transition: box-shadow .2s ease-in-out;
+}
+
+label {
+	display: block;
+}
+
+input[type="text"]:hover,
+textarea:hover {
+	box-shadow: 0 0 3px rgba(116, 185, 239, .7);
+	transition: box-shadow .2s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+	box-shadow: 0 0 3px rgba(116, 185, 239, 1);
+	border-color: #74B9EF;
+}

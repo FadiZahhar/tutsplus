@@ -1,0 +1,34 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 11
+ * ----------------------------------------------------------------------------------------
+ */
+
+.demo-container {
+	background-color: #ccc;
+	/* An additional method which works, but it's not recommended */
+	/*overflow: hidden;*/ 
+}
+
+.floated-image,
+.floated-p {
+	float: left;
+}
+
+/* Old method */
+/*.clear { clear: left; }*/
+
+/* Preferred method (A.K.A. The clearfix method) */
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1; /* For IE 6/7 */
+}

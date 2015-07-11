@@ -1,0 +1,31 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 9
+ * ----------------------------------------------------------------------------------------
+ */
+
+[class|="container"] {
+	background-color: #ccc;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+.container-1 p {
+	text-align: center;
+}
+
+.container-2 p {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.container-3 img {
+	display: block;
+	margin: 0 auto;
+}
+
+.container-4 {
+	height: 15em;
+	display: table-cell;
+	vertical-align: middle;
+}

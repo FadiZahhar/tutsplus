@@ -1,0 +1,41 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 12
+ * ----------------------------------------------------------------------------------------
+ */
+
+.arrow {
+	height: 0;
+	margin-bottom: 1em;
+	width: 0;
+}
+
+.up {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 17px solid red; /* (border-left + border-right) * 0.866 */
+}
+
+.down {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid blue;
+}
+
+.left {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid green;
+}
+
+.right {
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 52px solid gray; /* (border-left + border-right) * 0.866 */
+
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}

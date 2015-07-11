@@ -1,0 +1,26 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 1
+ * ----------------------------------------------------------------------------------------
+ */
+
+/* Normal CSS */
+.demo-p {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 1.5;
+	font-family: Arial, sans-serif;
+	background-color: #ccc;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+/* Shorthand CSS */
+.demo-p {
+	font: italic bold 13px/1.5em Arial, sans-serif;
+	background-color: #ccc;
+	padding: 1em 2em;
+}

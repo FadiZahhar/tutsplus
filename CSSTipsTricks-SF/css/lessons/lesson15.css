@@ -1,0 +1,35 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Lesson 15
+ * ----------------------------------------------------------------------------------------
+ */
+
+.demo-container ul {
+	list-style-type: none;
+}
+
+.list-1 li {
+	background: url(bullet.png) left center no-repeat;
+	padding-left: 1em;
+}
+
+.list-2 li:before {
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+    border-color: transparent #111; /* vertical horizontal */
+    border-style: solid;
+    border-width: 4px 0 4px 6px;
+	margin-right: .5em;
+}
+
+.list-3 li:before {
+	content: "";
+	display: inline-block;
+	background-color: blue;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	margin: 0 .5em 1px 0;
+}
