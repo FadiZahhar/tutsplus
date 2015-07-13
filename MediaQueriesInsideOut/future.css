@@ -1,0 +1,13 @@
+@media (light-level: dim | normal | washed) {}
+
+@media (update-frequency: none | slow | normal) { }
+
+@media (overflow-block: none | scroll | optional-paged | paged) { }
+
+@media (overflow-inline: none | scroll) { }
+
+@media (pointer: none | coarse | fine) { }
+
+@media (hover: none | on-demand | hover) { }
+
+@media (scripting: none | initial-only | enabled) { }

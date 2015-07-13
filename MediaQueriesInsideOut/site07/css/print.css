@@ -1,0 +1,8 @@
+header h1 {
+    background-color: transparent !important;
+    color: black !important;
+}
+.main-menu,
+.advertisement {
+    display: none;
+}

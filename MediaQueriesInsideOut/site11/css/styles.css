@@ -1,0 +1,42 @@
+@import url("resets.css");
+ .display {
+    background-color: green;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.portrait,
+.landscape {
+    line-height: 200px;
+}
+.portrait {
+    display: none;
+}
+/*@media (orientation: portrait) {
+    .landscape {
+        display: none;
+    }
+    .portrait {
+        display: block;
+    }
+    .display {
+        background-color: blue;
+    }
+}*/
+
+@media (max-aspect-ratio: 1/1) {
+    .landscape {
+        display: none;
+    }
+    .portrait {
+        display: block;
+    }
+    .display {
+        background-color: blue;
+    }
+}
