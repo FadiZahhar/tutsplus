@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Tabs</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    
+    <div id="tabs">
+        <ul>
+            <li><h3><a href="#one">One!</a></h3></li>
+            <li><h3><a href="#two">Two!</a></h3></li>
+            <li><h3><a href="#three">Three!</a></h3></li>
+            <li><h3><a href="remote.html">Remote!</a></h3></li>
+        </ul>
+        <div id="one">This is tab panel 1!</div>
+        <div id="two">This is tab panel 2!</div>
+        <div id="three">This is tab panel 3!</div>
+    </div>
+    <button id="changeAnims">Change the anims!</button>
+    <button id="reload">Reload!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            $("#tabs").tabs();
+
+            $("#changeAnims").on("click", function () {
+                $("#tabs").tabs("option", "hide", "explode");
+            });
+
+            $("#reload").on("click", function () {
+                $("#tabs").tabs("load", 3);
+            });
+        });
+    </script>
+</body>
+</html>

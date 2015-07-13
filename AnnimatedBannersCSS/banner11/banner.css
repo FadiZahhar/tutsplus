@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Bigelow+Rules|Pathway+Gothic+One);
+@import url(animations.css);
+
+.banner {
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	background: url('img/banner-bg.jpg') top left no-repeat;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+.banner h3 {
+	color: #5f8cbf;
+	font-family: 'Pathway Gothic One', Helvetica, 'Arial Narrow', Arial, sans-serif;
+	top: 37px;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.banner p {
+	color: #ea5858;
+	font-family: 'Bigelow Rules', sans-serif;
+}
+
+[class^="txt"], [class^="img"] {
+	position: absolute;
+	margin: 0;
+}
+
+[class^="txt"] {
+	z-index: 200;
+}
+
+.img01 {
+	bottom: 0px;
+	left: 80px;
+	z-index: 300;
+}
+
+.txt-heading01 {
+	left: -500px;
+	width: 900px;
+	-webkit-animation: heading01-on 1s forwards, heading01-loop 12s ease 1s infinite;
+	-moz-animation: heading01-on 1s forwards, heading01-loop 12s ease 1s infinite;
+	-o-animation: heading01-on 1s forwards, heading01-loop 12s ease 1s infinite;
+	animation: heading01-on 1s forwards, heading01-loop 12s ease 1s infinite;
+}
+
+.txt-heading02 {
+	left: -500px;
+	width: 900px;
+	-webkit-animation: heading02-loop 12s ease 1s infinite;
+	-moz-animation: heading02-loop 12s ease 1s infinite;
+	-o-animation: heading02-loop 12s ease 1s infinite;
+	animation: heading02-loop 12s ease 1s infinite;
+}
+
+.txt01, .txt02 { font-size: 100px; }
+
+.txt01 {
+	left: 920px;
+	top: 110px;
+	-webkit-animation: txt01-on .5s ease .25s forwards;
+}
+
+.txt02 {
+	left: -200px;
+	top: 180px;
+	-webkit-animation: txt02-on .5s ease .25s forwards;
+}
+
+.txt03 {
+	font-size: 100px;
+	left: 500px;
+	top: 120px;
+}
+
+.txt04 {
+	font-size: 60px;
+	left: 600px;
+	top: 205px;
+}
+
+.img-snow01 { 
+	-webkit-animation: snowfall 5s linear infinite;
+	z-index: 100;
+}
+
+.img-snow02 {
+	-webkit-animation: snowfall 1s linear infinite;
+	z-index: 400;
+}

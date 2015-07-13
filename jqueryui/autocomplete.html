@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Autocomplete</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    <input id="auto" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            var data = ["Apples", "Oranges", "bananas", "pears", "peaches", "Starfruit", "Grapes"];
+
+            $("#auto").autocomplete({
+                source: data,
+                position: {
+                    my: "left top",
+                    at: "right top"
+                }
+            });
+
+            $("#myelement").position({
+                of: "#someotherelement"
+            });
+
+        });
+    </script>
+</body>
+</html>

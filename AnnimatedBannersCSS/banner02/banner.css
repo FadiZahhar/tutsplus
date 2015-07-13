@@ -1,0 +1,10 @@
+.banner {
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	background: url('img/banner-bg.jpg') top left no-repeat;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+}

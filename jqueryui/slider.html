@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Slider</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    
+    <div id="slider"></div>
+    <button id="get">Get!</button>
+    <button id="set">Set!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            $("#slider").slider({
+                step: 10
+            });
+
+            $("#get").on("click", function () {
+                console.log("value is: " + $("#slider").slider("value"));
+            });
+
+            $("#set").on("click", function () {
+                $("#slider").slider("value", 100);
+            });
+
+            $("#slider").on("slidecreate slidechange slidestart slidestop slide", function (e) {
+                console.log("The event " + e.type + " fired");
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QUnit</title>
+    <link rel="stylesheet" href="css/qunit.css" />
+</head>
+<body>
+    <div id="qunit"></div>
+    <script src="js/qunit.js"></script>
+    <script>
+        function falsifyIt(it) {
+            return it = false;
+        }
+
+        test("The falsifyIt function", function () {
+            var value = falsifyIt("");
+
+            equal(value, false, "We expect the value to equal false");
+        });
+    </script>
+</body>
+</html>

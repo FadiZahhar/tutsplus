@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Datepicker</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    
+    <input id="date" />
+    
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            $("#date").datepicker({
+                minDate: new Date(),
+                changeMonth: true,
+                changeYear: true,
+                showWeek: true,
+                showOtherMonths: true,
+                appendText: "dd/mm/yyyy",
+                buttonImage: "cal.png",
+                buttonImageOnly: true,
+                buttonText: "Open the datepicker",
+                showOn: "both",
+                dateFormat: "dd-mm-yy",
+                beforeShowDay: function (date) {
+                    var dateSplit = date.toString().split(" ");
+
+                    if (dateSplit[0] === "Mon" && dateSplit[2] < 7) {
+                        return [false, "disabled", "We don't ever work on the first Monday of the month"];
+                    } else {
+                        return [true];
+                    }
+                }
+            });
+            
+        });
+    </script>
+</body>
+</html>

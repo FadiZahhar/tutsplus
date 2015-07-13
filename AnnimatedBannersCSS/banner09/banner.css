@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Bigelow+Rules|Pathway+Gothic+One);
+@import url(animations.css);
+
+.banner {
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	background: url('img/banner-bg.jpg') top left no-repeat;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+.banner h3 {
+	color: #5f8cbf;
+	font-family: 'Pathway Gothic One', Helvetica, 'Arial Narrow', Arial, sans-serif;
+	top: 37px;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.banner p {
+	color: #ea5858;
+	font-family: 'Bigelow Rules', sans-serif;
+}
+
+[class^="txt"], [class^="img"] {
+	position: absolute;
+	margin: 0;
+}
+
+[class^="txt"] {
+	z-index: 200;
+}
+
+.img01 {
+	bottom: 0px;
+	left: 80px;
+	z-index: 300;
+}
+
+.txt-heading01 {
+	left: -500px;
+	-webkit-animation: heading01-on 1s forwards;
+}
+
+.txt-heading02 {
+	left: 400px;
+}
+
+.txt01, .txt02 { font-size: 100px; }
+
+.txt01 {
+	left: 550px;
+	top: 110px;
+}
+
+.txt02 {
+	left: 610px;
+	top: 180px;
+}
+
+.txt03 {
+	font-size: 100px;
+	left: 500px;
+	top: 120px;
+}
+
+.txt04 {
+	font-size: 60px;
+	left: 600px;
+	top: 205px;
+}
+
+.img-snow01 { 
+	-webkit-animation: snowfall 5s linear infinite;
+	z-index: 100;
+}
+
+.img-snow02 {
+	-webkit-animation: snowfall 1s linear infinite;
+	z-index: 400;
+}

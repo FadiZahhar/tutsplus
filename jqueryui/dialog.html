@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Dialog</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    <div id="dialog" title="My dialog!">
+        <p>Lorem ipsum dolor</p>
+    </div>
+    <div id="dialog2" title="Also a dialog!">
+        <p>Dialog two yay!</p>
+    </div>
+    <button id="show">Show!</button>
+    <button id="show2">Show 2!</button>
+    <button id="top">Top!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            $("#dialog").dialog({
+                autoOpen: false,
+                //modal: true,
+                buttons: {
+                    "Ok": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            $("#dialog2").dialog({
+                autoOpen: false
+            });
+
+            $("#show").on("click", function () {
+                $("#dialog").dialog("open");
+            });
+            $("#show2").on("click", function () {
+                $("#dialog2").dialog("open");
+            });
+            $("#top").on("click", function () {
+                $("#dialog").dialog("moveToTop");
+            });
+        });
+    </script>
+</body>
+</html>

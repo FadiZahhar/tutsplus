@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Accordion</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    <div id="accordion">
+        <h3>One!</h3>
+        <div>This is panel 1</div>
+        <h3>Two!</h3>
+        <div>This is panel 2</div>
+        <h3>Three!</h3>
+        <div>This is panel 3</div>
+    </div>
+    <button id="disable">Disable!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                active: 1,
+                animate: {
+                    easing: "linear",
+                    duration: 100,
+                    down: {
+                        easing: "easeOutBounce",
+                        duration: 300
+                    }
+                },
+                collapsible: true,
+                create: function () {
+                    console.log("Woo!");
+                }
+            });
+
+            $("#disable").on("click", function () {
+                $("#accordion").accordion("disable");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Progressbar</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.1.custom.min.css" />
+</head>
+<body>
+    <div id="progress"></div>
+    <button id="go">Go!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+    <script>
+        $(function () {
+            
+            var interval;
+
+            $("#progress").progressbar({
+                complete: function () {
+                    clearInterval(interval);
+                    console.log("Done");
+                }
+            });
+
+            $("#go").on("click", function () {
+
+                var currentVal = $("#progress").progressbar("value"),
+                    increasePercent = function () {
+
+                        currentVal = currentVal + 5;
+
+                        $("#progress").progressbar("option", "value", currentVal);
+
+                    };
+
+                if (!interval) {
+                    interval = setInterval(increasePercent, 50);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
