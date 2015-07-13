@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Slide-in menu on keypress</title>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	background-color: #161616;
+	color: rgba(224, 224, 224, 0.8);
+}
+
+h1 {
+	font-size: 40px;
+}
+
+p {
+	font-size: 36px;
+}
+
+#menu{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -410px;
+	background-color:#F03;
+	color: #000000;
+	font-size:60px;
+	
+    -webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+#menu.open{
+    left: 0;
+}
+
+#panel{
+	width: 410px;
+	float: left;    
+}
+
+#tab{
+	width: 40px;
+	background-color: #F90;
+	cursor: pointer;
+	float: left;  
+}
+</style>
+</head>
+
+<body>
+<div id="menu">
+	<div id="panel">NOW YOU<br>SEE ME!</div>
+	<div id="tab">&raquo;</div>
+</div>
+
+<h1>Slide-in menu on click or keypress</h1>
+<h2>[Click arrow tab or hit 'M' key]</h1>
+
+<p id="label1">KEY PRESSED: None</p>
+<p id="label2">MENU OPEN: false</p>
+
+<script>
+var menuOpen=false;	//Menu is closed by default
+
+$(function(){
+	$("body").bind("keyup", activated);		//Binds keyup event to page body
+	$("#tab").bind("click", activated);		//Binds click event to menu tab
+});
+
+function activated(event){
+	//Outputs string denoting the latest keypress character 
+	$("#label1").text("KEY PRESSED = " + String.fromCharCode(event.keyCode));
+		
+	if(event.keyCode==77 || event.type=="click"){			
+		//Toggles the menu element class to open or closed
+		$("#menu").toggleClass("open");
+		//Flip the menuOpen flag to opposite
+		menuOpen=!menuOpen;
+		
+		//Switches the tab arrow to in or out
+		if(menuOpen){ $("#tab").html("&laquo;");} else { 
+			$("#tab").html("&raquo;");
+		};
+		
+		//Outputs current state of menuOpen 	
+		$("#label2").text("MENU OPEN: " + menuOpen.toString());
+	};
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fading Menu</title>
+    <style>
+        nav{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: #333 url(menu.png) 0 0;
+            margin-bottom: 50px;
+        }
+        #panel{
+            display: block;
+            width: 80%;
+            height: 600px;
+            margin: 0 auto;
+            background: #333;
+        }
+        #overlay{
+            width: 100%;
+            height: 600px;
+            background: #fff;
+        }
+        ul{
+            list-style-type: none;	
+            margin: 0;
+            padding: 0;	
+            text-align: center; 
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        ul li{
+            display: block;
+            padding: 20px 10px;  
+            border-bottom: 1px solid #ccc;
+            transition: background 0.5s;
+        }
+        ul li a{
+            color: #555;	
+            text-decoration: none;   
+        }
+        ul li:hover {
+	       background: #eee;	
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+    <body>
+        <nav id="show"></nav>
+        <container id="panel">
+            <div id="overlay" class="hidden">
+                <ul>
+                    <li><a href="#">Menu Item 1</a></li>
+                    <li><a href="#">Menu Item 2</a></li>
+                    <li><a href="#">Menu Item 3</a></li>
+                    <li><a href="#">Menu Item 4</a></li>
+                    <li><a href="#">Menu Item 5</a></li>
+                </ul>
+            </div>
+        </container>
+        
+        <script src="jquery.js"></script>
+        <script>
+            $(function() {
+                var overlay = $("#overlay");
+                var menu = $("#show");
+                var open=false;                
+                menu.click(function(){
+                    if(open){
+                        menu.css("background-position", "0 0");
+                        overlay.fadeOut();
+                        open=false;
+                    }else{
+                        menu.css("background-position", "-50px 0");
+                        overlay.fadeIn();
+                        open=true;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
