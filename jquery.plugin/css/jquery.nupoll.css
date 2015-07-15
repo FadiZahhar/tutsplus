@@ -1,0 +1,14 @@
+﻿.nupoll { padding:20px 40px 30px; float:left; }
+.nupoll h1 { margin:0 0 10px; }
+.nupoll form:after, .nupoll dl:after { content:""; display:block; height:0; visibility:hidden; clear:both; }
+.nupoll input, .nupoll label { display:block; margin-bottom:10px; float:left; }
+.nupoll input, .nupoll-submit { display:block; clear:both; }
+.nupoll input { margin:5px 10px 10px 0; }
+.nupoll-submit { margin-top:10px; float:left; }
+
+.nupoll dl { margin-bottom:0; }
+.nupoll dt { width:10%; margin-right:5%; float:left; clear:both; }
+.nupoll dd { width:84%; margin-left:0; float:left; }
+.nupoll dt, .nupoll dd { padding:5px 0; }
+.nupoll dt label { margin-bottom:0; float:none; }
+.nupoll dd span { display:block; height:22px; text-align:center; }

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>nuPoll - jPoll 2.0</title>
+    <link rel="Stylesheet" href="css/jquery.nupoll.css" />
+    <link rel="Stylesheet" href="css/theme.css" />
+</head>
+<body>
+    <div id="mypoll"></div>    
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.nupoll.js"></script>
+    <script>
+        $(function () {
+            $("#mypoll").nupoll({
+                ajaxOptions: {
+                    converters: {
+                        "text json": function (data) {
+                            var parsed = JSON.parse(data);
+
+                            return parsed.d;
+                        }
+                    }
+                },
+                animation: "fade"
+            });
+        });
+    </script>
+</body>
+</html>
