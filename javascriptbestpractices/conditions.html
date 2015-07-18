@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+var isArthur = false;
+var weapon;
+/* instead of this code */
+if(isArthur) {
+  weapon = "Excalibur";
+}
+else {
+  weapon ="Longsword";
+}
+
+/* should use the shortcode */
+/* condition ? if true : if false */
+(isArthur) ? weapon = "Excalibur" : wepon = "Longsword";
+
+/* also if we are concating with string such this  */
+console.log("current weapon: " + (isArthur) ? wepon = "excalibur" : wepon = "longsword");
+/* we should put parenthesis before the + to be able to eval correctly */
+console.log("current weapon: " + ((isArthur) ? wepon = "excalibur" + wepon = "longsword"));
+
+/* we can invoce functions() in the true false condition */
+</script>
+</head>
+<body>
+
+</body>
+</html>
