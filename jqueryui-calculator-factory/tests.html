@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Calculator Widget</title>
+    <link rel="stylesheet" href="css/le-frog/jquery-ui-1.10.2.custom.min.css" />
+    <link rel="stylesheet" href="css/jquery.dw.calculator.css" />
+</head>
+<body>
+    <div id="calc"></div>
+    <button id="change">Change!</button>
+    <button id="disable">Disable option!</button>
+    <button id="disable2">Disable method!</button>
+    <button id="enable">Enable method!</button>
+    <button id="enable2">Enable option!</button>
+    <button id="show">Show!</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery.ui.core.js"></script>
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.ui.button.js"></script>
+    <script src="js/jquery.dw.calculator.js"></script>
+    <script>
+        $(function () {
+            $('#calc').calculator({
+                showOnCreate: true,
+                beforeAddButton: function (e, ui) {
+                    if (ui.label === 'MR' || ui.label === 'MS' || ui.label === 'MC') {
+                        return false;
+                    }
+                },
+                shown: function (e) {
+                    console.log('Shown!');
+                }
+            });
+
+            $('#change').click(function () {
+                $('#calc').calculator('option', 'buttons', [{ label: 'Test' }]);
+            });
+
+            $('#disable').click(function () {
+                $('#calc').calculator('option', 'disabled', true);
+            });
+
+            $('#disable2').click(function () {
+                $('#calc').calculator('disable');
+            });
+
+            $('#enable').click(function () {
+                $('#calc').calculator('option', 'disabled', false);
+            });
+
+            $('#enable2').click(function () {
+                $('#calc').calculator('enable');
+            });
+
+            $('#show').click(function () {
+                $('#calc').calculator('show');
+            });
+        });
+    </script>
+</body>
+</html>
