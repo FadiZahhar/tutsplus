@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Draggable</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .ui-draggable { width:300px; height:300px; background-color:red; }
+    </style>
+</head>
+<body>
+    <div id="drag"></div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#drag").draggable({
+                cancel: "div"
+            });
+        });
+    </script>
+</body>
+</html>

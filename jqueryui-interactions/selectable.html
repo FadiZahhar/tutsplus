@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Selectable</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .select { margin-bottom:10px; width:300px; height:50px; background-color:red; }
+        #selects { padding: 20px; }
+    </style>
+</head>
+<body>
+    <div id="selects">
+        <div class="select filtered"></div>
+        <div class="select filtered"></div>
+        <div class="select filtered"></div>
+        <div class="select"></div>
+        <div class="select"></div>
+    </div>
+    <button id="add">Add</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#selects").selectable({
+                filter: ".filtered",
+                tolerance: "fit",
+                autoRefresh: false
+            });
+
+            $("#add").on("click", function () {
+                $("<div/>", {
+                    "class": "select filtered"
+                }).appendTo("#selects");
+
+                $("#selects").selectable("refresh");
+            });
+        });
+    </script>
+</body>
+</html>

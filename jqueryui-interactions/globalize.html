@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Globalize</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+</head>
+<body>
+    <div id="langs">
+        <a data-lang="en" href="#"><img src="img/flag-gb.png" /></a>
+        <a data-lang="de-DE" href="#"><img src="img/flag-de.png" /></a>
+        <a data-lang="ja-JP" href="#"><img src="img/flag-jp.png" /></a>
+    </div>
+    <select id="days"></select>
+    
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/external/globalize.js"></script>
+    <script src="js/external/globalize.culture.de-DE.js"></script>
+    <script src="js/external/globalize.culture.ja-JP.js"></script>
+    <script>
+        $(function () {
+            
+            var days = Globalize.cultures.default.calendar.days.names.slice(0).reverse(),
+                x = days.length;
+
+            while (--x >= 0) {
+                $("<option/>", {
+                    text: days[x]
+                }).appendTo("#days");
+            }
+            
+            $("#langs").on("click", "a", function () {
+                var culture = $(this).data("lang"),
+                    text = Globalize.cultures[culture].calendar.days.names;
+
+                $("#days").children().each(function (i) {
+                    $(this).text(text[i]);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

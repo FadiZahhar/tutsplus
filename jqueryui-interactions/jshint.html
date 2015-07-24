@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Mousewheel</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+</head>
+<body>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/external/jshint.js"></script>
+    <script id="script" src="js/test.js"></script>
+    <script>
+        $(function () {
+            $.ajax($("#script").attr("src"), {
+                success: function (data) {
+                    var linted = JSHINT(data, {
+                        asi: true
+                    });
+
+                    if (!linted) {
+                        console.log(JSHINT.errors);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Draggable</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .ui-draggable { width:100px; height:100px; background-color:red; float:left; }
+        .ui-droppable { height: 300px; width: 300px; border: 1px solid #000; position: absolute; bottom: 1%; }
+        #drag1 { margin-right: 10px; }
+        #drop2 { right: 1%; }
+    </style>
+</head>
+<body>
+    <div class="drag" id="drag1"></div>
+    <div class="drag" id="drag2"></div>
+    <div id="drop1"></div>
+    <div id="drop2"></div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#drag1").draggable({
+                scope: "a"
+            });
+            $("#drag2").draggable({
+                scope: "b"
+            });
+
+            $("#drop1").droppable({
+                scope: "a",
+                drop: function () {
+                    console.log("Scope a dropped");
+                }
+            });
+
+            $("#drop2").droppable({
+                scope: "b",
+                drop: function () {
+                    console.log("Scope b dropped");
+                },
+                activate: function () {
+                    $(this).css("backgroundColor", "green");
+                },
+                deactivate: function () {
+                    $(this).css("backgroundColor", "white");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

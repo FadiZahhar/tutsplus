@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Resizable</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .ui-resizable { border:1px solid #000; width:200px; height:200px; }
+    </style>
+</head>
+<body>
+    <div id="resize"></div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#resize").resizable({
+                ghost: true,
+                animate: true,
+                handles: "s"
+            });
+        });
+    </script>
+</body>
+</html>

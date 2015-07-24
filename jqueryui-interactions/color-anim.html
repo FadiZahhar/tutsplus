@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Effects Core</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .box { width:300px; height:300px; background-color:red; border:1px solid #000; }
+        .class1 { background-color:blue; border-radius: 300px; }
+        .class2 { background-color:red; border-radius: 0; }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button id="toggle">Toggle</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            var switchTheClass = false;
+            $("#toggle").on("click", function () {
+                if (switchTheClass) {
+                    switchTheClass = false;
+                    $(".box").switchClass("class1", "class2");
+                } else {
+                    switchTheClass = true;
+                    $(".box").switchClass("class2", "class1");
+                }
+            });
+            
+        });
+    </script>
+</body>
+</html>

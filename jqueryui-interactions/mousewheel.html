@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Mousewheel</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+</head>
+<body>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/external/jquery.mousewheel.js"></script>
+    <script>
+        $(function () {
+            var zoom = 0;
+
+            $(document).mousewheel(function (e, delta) {
+
+                if (zoom < -9 || zoom > 9) {
+                    $(document).unmousewheel();
+                }
+
+                if (delta < 0) {
+                    zoom--;
+                } else {
+                    ++zoom;
+                }
+
+                console.log(zoom);
+            });
+        });
+    </script>
+</body>
+</html>

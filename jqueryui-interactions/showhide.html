@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Effects</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        body { padding: 50px; }
+        .box { width:100px; height:100px; background-color:red; border:1px solid #000; display:none; }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button id="go">Go</button>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            
+            $("#go").on("click", function () {
+                $(".box").show("slide");
+            });
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery UI Sortable</title>
+    <link rel="stylesheet" href="css/base/jquery-ui.css" />
+    <style>
+        .empty { border: 1px solid red; }
+    </style>
+</head>
+<body>
+    <ul id="sort">
+        <li id="item_1">Item 1</li>
+        <li id="item_2">Item 2</li>
+        <li id="item_3">Item 3</li>
+        <li id="item_4">Item 4</li>
+        <li id="item_5">Item 5</li>
+    </ul>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#sort").sortable({
+                opacity: 0.5,
+                placeholder: "empty",
+                stop: function () {
+                    console.log($(this).sortable("toArray"));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
